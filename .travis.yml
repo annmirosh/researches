@@ -9,9 +9,6 @@ before_script:
   - 'npm install -g bower'
   - 'bower install'
 
-after_script:
-  - 'gulp test-ci'
-
 notifications:
   on_success: change
   on_failure: always

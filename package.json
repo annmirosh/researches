@@ -17,5 +17,8 @@
     "sinon": "^1.16.1",
     "sinon-chai": "^2.8.0",
     "wiredep": "2.2.2"
+  },
+  "scripts": {
+    "test": "gulp test-ci"
   }
 }
