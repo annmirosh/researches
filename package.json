@@ -19,6 +19,6 @@
     "wiredep": "2.2.2"
   },
   "scripts": {
-    "test": "gulp test-ci"
+    "test": "gulp test"
   }
 }

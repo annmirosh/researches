@@ -10,7 +10,6 @@ module.exports = function (config) {
       'src/**/*.js',
       'src/**/*.spec.js'
     ],
-    browsers: [ 'Chrome' ],
     plugins: [
       'karma-mocha',
       'karma-chai',

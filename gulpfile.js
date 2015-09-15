@@ -1,5 +1,6 @@
 // Include gulp
 var gulp = require('gulp');
+var isTravis = process.env.TRAVIS || false;
 
 // Include Plugins
 var wiredep = require('wiredep').stream;
@@ -16,17 +17,9 @@ gulp.task('bower', function () {
 gulp.task('test', function (done) {
   new Server({
     configFile: __dirname + '/karma.conf.js',
-    singleRun: false,
-    autoWatch: true
-  }, done).start();
-});
-
-// Run tests on CI
-gulp.task('test-ci', function (done) {
-  new Server({
-    configFile: __dirname + '/karma.conf.js',
-    singleRun: true
-
+    singleRun: isTravis,
+    autoWatch: true,
+    browsers: isTravis?[ 'PhantomJS' ]:[ 'Chrome' ]
   }, done).start();
 });
 
