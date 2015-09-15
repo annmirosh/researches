@@ -10,7 +10,6 @@ module.exports = function (config) {
       'src/**/*.js',
       'src/**/*.spec.js'
     ],
-    autoWatch: true,
     browsers: [ 'Chrome' ],
     plugins: [
       'karma-mocha',
@@ -27,7 +26,6 @@ module.exports = function (config) {
     },
     reporters: ['mocha'],
     port: 9876,
-    colors: true,
-    singleRun:false
+    colors: true
   });
 };

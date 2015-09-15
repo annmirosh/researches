@@ -16,7 +16,17 @@ gulp.task('bower', function () {
 gulp.task('test', function (done) {
   new Server({
     configFile: __dirname + '/karma.conf.js',
-    singleRun: false
+    singleRun: false,
+    autoWatch: true
+  }, done).start();
+});
+
+// Run tests on CI
+gulp.task('test-ci', function (done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+
   }, done).start();
 });
 
