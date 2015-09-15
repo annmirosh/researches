@@ -1,0 +1,13 @@
+{
+  "name": "FoodTracker",
+  "description": "Simple application to keep track of what and how much you eat",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "jquery": "~2.1.1",
+    "angular-ui-router": "~0.2.13",
+    "bootstrap": "~3.1.1"
+  }
+}

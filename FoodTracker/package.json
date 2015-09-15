@@ -1,0 +1,21 @@
+{
+  "name": "FoodTracker",
+  "description": "Simple application to keep track of what and how much you eat",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "gulp": "^3.9.0",
+    "karma": "^0.13.9",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-sinon-chai": "^1.1.0",
+    "mocha": "^2.3.2",
+    "phantomjs": "^1.9.18",
+    "sinon": "^1.16.1",
+    "sinon-chai": "^2.8.0",
+    "wiredep": "2.2.2"
+  }
+}
