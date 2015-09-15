@@ -1,2 +1,14 @@
-# researches
-This repository keeps projects where I play with interesting things from JS world.
+Food Tracker allows to keep in mind what and how much do you eat today and in the past.
+
+I'm going to use here:
+
+ * Angular
+ * Gulp
+ * Mocha, Sinon, Chai
+ * Typescript
+ * Travis
+
+To set up environment you should execute following commands:
+
+    $ npm install
+    $ bower install

@@ -1,6 +1,6 @@
 module.exports = function (config) {
   config.set({
-    basePath: '',
+    basePath: 'FoodTracker),
     frameworks: [ 'mocha', 'chai','sinon-chai'],
     files: [
       'bower_components/angular/angular.js',
