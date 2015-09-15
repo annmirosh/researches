@@ -11,3 +11,7 @@ before_script:
 
 after_script:
   - 'gulp test-ci'
+
+notifications:
+  on_success: change
+  on_failure: always
