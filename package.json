@@ -5,6 +5,7 @@
   "devDependencies": {
     "chai": "^3.2.0",
     "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.0",
     "karma": "^0.13.9",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.2.0",
