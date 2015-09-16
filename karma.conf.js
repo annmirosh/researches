@@ -1,15 +1,16 @@
 module.exports = function (config) {
+  var wiredep = require('wiredep');
+
+  var bowerFiles = wiredep({devDependencies: true})[ 'js' ];
+
   config.set({
     basePath: '',
-    frameworks: [ 'mocha', 'chai','sinon-chai'],
-    files: [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-mocks/angular-mocks.js',
-      'bower_components/angular-ui-router/release/angular-ui-router.js',
+    frameworks: [ 'mocha', 'chai', 'sinon-chai' ],
+    files: bowerFiles.concat([
       'node_modules/sinon-chai/sinon.js',
       'src/**/*.js',
       'src/**/*.spec.js'
-    ],
+    ]),
     plugins: [
       'karma-mocha',
       'karma-chai',
@@ -24,7 +25,7 @@ module.exports = function (config) {
         ui: 'bdd'
       }
     },
-    reporters: ['mocha'],
+    reporters: [ 'mocha' ],
     port: 9876,
     colors: true
   });
