@@ -3,8 +3,7 @@
     .module('today.controller', [])
     .controller('TodayController', TodayController);
 
-  TodayController.$inject = [ 'IngestionService', 'DateTimeService' ];
-
+  /*@ngInject*/
   function TodayController(IngestionService, DateTimeService) {
     this.ingestions = [];
     this.addIngestion = addIngestion;
@@ -27,4 +26,5 @@
       return IngestionService.getTitle(isSnack);
     }
   }
+  TodayController.$inject = ['IngestionService', 'DateTimeService'];
 })();

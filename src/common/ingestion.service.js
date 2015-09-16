@@ -3,7 +3,7 @@
     .module('ingestion.service', [])
     .service('IngestionService', IngestionService);
 
-  IngestionService.$inject = [ 'DateTimeService' ];
+  /*@ngInject*/
   function IngestionService(DateTimeService) {
     this.getTitle = getTitle;
 
@@ -25,4 +25,5 @@
       }
     }
   }
+  IngestionService.$inject = ['DateTimeService'];
 })();
