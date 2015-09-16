@@ -39,6 +39,11 @@
         dateTimeService.now.returns(new Date(2011, 9, 1, 17, 0, 0));
         expect(ingestionService.getTitle()).to.equal('dinner');
       });
+
+      it('(23-39 dinner time)', function () {
+        dateTimeService.now.returns(new Date(2011, 9, 1, 23, 39, 0));
+        expect(ingestionService.getTitle()).to.equal('dinner');
+      });
     })
   });
 })();

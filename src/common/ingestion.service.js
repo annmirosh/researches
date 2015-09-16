@@ -20,7 +20,7 @@
       if ( hours >= 12 && hours < 16 ) {
         return 'lunch';
       }
-      if ( (hours >= 16 && hours < 23) || (hours >= 0 && hours < 5) ) {
+      if ( (hours >= 16 && hours <= 23) || (hours >= 0 && hours < 5) ) {
         return 'dinner';
       }
     }
