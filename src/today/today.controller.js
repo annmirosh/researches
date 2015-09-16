@@ -1,11 +1,11 @@
 (function () {
   angular
-    .module('main.controller', [])
-    .controller('MainController', MainController);
+    .module('today.controller', [])
+    .controller('TodayController', TodayController);
 
-  MainController.$inject = [ 'IngestionService', 'DateTimeService' ];
+  TodayController.$inject = [ 'IngestionService', 'DateTimeService' ];
 
-  function MainController(IngestionService, DateTimeService) {
+  function TodayController(IngestionService, DateTimeService) {
     this.ingestions = [];
     this.addIngestion = addIngestion;
     this.getTitleIngestion = getTitleIngestion;

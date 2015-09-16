@@ -3,7 +3,7 @@
   angular
     .module('app', [
       'ui.router',
-      'main.controller',
+      'today.controller',
       'ingestion.service',
       'datetime.service'
     ])

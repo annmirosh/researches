@@ -1,16 +1,16 @@
-<div ng-controller="MainController as main">
-    <button class="btn btn-default" ng-click="main.addIngestion()">Add
-        {{main.getTitleIngestion()}}
+<div ng-controller="TodayController as todayCtrl">
+    <button class="btn btn-default" ng-click="todayCtrl.addIngestion()">Add
+        {{todayCtrl.getTitleIngestion()}}
     </button>
-    <button class="btn btn-default" ng-click="main.addIngestion(true)">Add
-        {{main.getTitleIngestion(true)}}</a></button>
+    <button class="btn btn-default" ng-click="todayCtrl.addIngestion(true)">Add
+        {{todayCtrl.getTitleIngestion(true)}}</a></button>
     <br>
 
-    <p ng-hide="main.ingestions.length">You don't have any records about your food for today</p>
+    <p ng-hide="todayCtrl.ingestions.length">You don't have any records about your food for today</p>
 
     <br>
 
-    <div ng-repeat="ingestion in main.ingestions" class="panel panel-default">
+    <div ng-repeat="ingestion in todayCtrl.ingestions" class="panel panel-default">
         <div class="panel-heading">{{ingestion.title}}</div>
         <div class="panel-body">
             Content
