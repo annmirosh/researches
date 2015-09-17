@@ -12,6 +12,6 @@
     "quotes": [2, "single"],
     "semi": [2, "always"],
     "space-in-brackets": [0, "never"],
-    "space-infix-ops": 2,
+    "space-infix-ops": 2
   }
 }
