@@ -44,6 +44,6 @@
         dateTimeService.now.returns(new Date(2011, 9, 1, 23, 39, 0));
         expect(ingestionService.getTitle()).to.equal('dinner');
       });
-    })
+    });
   });
 })();

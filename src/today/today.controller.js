@@ -11,7 +11,7 @@
 
     function addIngestion(isSnack) {
       this.ingestions.push(createIngestion(isSnack));
-      console.log(this.ingestions)
+      console.log(this.ingestions);
     }
 
     function createIngestion(isSnack) {
@@ -19,7 +19,7 @@
         title: getTitleIngestion(isSnack),
         time: DateTimeService.now(),
         foods: []
-      }
+      };
     }
 
     function getTitleIngestion(isSnack) {

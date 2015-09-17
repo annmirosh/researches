@@ -3,7 +3,8 @@ var gulp = require('gulp'),
   livereload = require('gulp-livereload'),
   wiredep = require('wiredep').stream,
   Server = require('karma').Server,
-  ngAnnotate = require('gulp-ng-annotate');
+  ngAnnotate = require('gulp-ng-annotate'),
+  eslint = require('gulp-eslint');
 
 var isTravis = process.env.TRAVIS || false;
 
@@ -24,15 +25,22 @@ gulp.task('test', function (done) {
   }, done).start();
 });
 
+gulp.task('lint', function () {
+  return gulp.src([ 'src/**/*.js' ])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failOnError());
+});
+
 //Watch task
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch('./src/**/*.js',['ngAnnotate']);
+  gulp.watch('./src/**/*.js', [ 'lint', 'ngAnnotate' ]);
   gulp.watch('./src/**/*.*').on('change', livereload.changed);
 });
 
 gulp.task('ngAnnotate', function () {
-  gulp.src([ 'src/**/*.js'])
+  gulp.src([ 'src/**/*.js' ])
     .pipe(ngAnnotate({
       remove: true,
       add: true,
