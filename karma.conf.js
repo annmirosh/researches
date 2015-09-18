@@ -8,7 +8,7 @@ module.exports = function (config) {
     frameworks: [ 'mocha', 'chai', 'sinon-chai' ],
     files: bowerFiles.concat([
       'node_modules/sinon-chai/sinon.js',
-      'src/**/*.js',
+      'src/main.js',
       'src/**/*.spec.js'
     ]),
     plugins: [

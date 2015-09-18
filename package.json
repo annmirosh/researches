@@ -3,6 +3,11 @@
   "description": "Simple application to keep track of what and how much you eat",
   "license": "MIT",
   "devDependencies": {
+    "angular": "^1.4.6",
+    "angular-mocks": "^1.4.6",
+    "angular-ui-router": "^0.2.15",
+    "bootstrap": "^3.3.5",
+    "browserify": "^11.1.0",
     "chai": "^3.2.0",
     "eslint": "^1.4.3",
     "eslint-config-defaults": "^6.0.0",
@@ -10,6 +15,7 @@
     "gulp-eslint": "^1.0.0",
     "gulp-livereload": "^3.8.0",
     "gulp-ng-annotate": "^1.1.0",
+    "jquery": "^2.1.4",
     "karma": "^0.13.9",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.2.0",
@@ -22,6 +28,7 @@
     "require-dir": "^0.3.0",
     "sinon": "^1.16.1",
     "sinon-chai": "^2.8.0",
+    "vinyl-source-stream": "^1.1.0",
     "wiredep": "2.2.2"
   },
   "scripts": {
