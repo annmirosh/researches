@@ -33,5 +33,9 @@
   },
   "scripts": {
     "test": "gulp test"
+  },
+  "dependencies": {
+    "angular-animate": "^1.4.6",
+    "angularjs-toaster": "^0.4.15"
   }
 }

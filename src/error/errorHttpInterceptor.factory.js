@@ -1,17 +1,12 @@
 angular.module('errorHttpInterceptor.factory', [])
   .factory('errorHttpInterceptor', ErrorHttpInterceptor);
 
-ErrorHttpInterceptor.$inject = [ '$q' ];
+ErrorHttpInterceptor.$inject = [ '$q', 'ToasterService' ];
 
-function ErrorHttpInterceptor($q) {
+function ErrorHttpInterceptor($q, ToasterService) {
   return {
     responseError: function responseError(rejection) {
-      Raven.captureException(new Error('HTTP response error'), {
-        extra: {
-          config: rejection.config,
-          status: rejection.status
-        }
-      });
+      ToasterService.showMessage('Error in reguest to: ' + rejection.config.url);
       return $q.reject(rejection);
     }
   };

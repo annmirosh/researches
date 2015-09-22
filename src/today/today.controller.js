@@ -11,14 +11,6 @@
     this.getTitleIngestion = getTitleIngestion;
 
     function addIngestion(isSnack) {
-
-      if ( isSnack ) {
-        $http.get('someUrl');
-      } else {
-        var f = null;
-        f.k++;
-      }
-
       this.ingestions.push(createIngestion(isSnack));
       console.log(this.ingestions);
     }

@@ -2,21 +2,27 @@
 
 require('angular');
 require('angular-ui-router');
+require('angularjs-toaster');
+require('angular-animate');
 
 module.export = ('today.controller', require('./today/today.controller'));
 module.export = ('datetime.service', require('./common/datetime.service'));
 module.export = ('ingestion.service', require('./common/ingestion.service'));
 module.export = ('errorCatcher.factory', require('./error/errorCatcher.factory'));
 module.export = ('errorHttpInterceptor.factory', require('./error/errorHttpInterceptor.factory'));
+module.export = ('toaster.service', require('./error/toaster.service'));
 
 var app = angular
   .module('app', [
     'ui.router',
+    'toaster',
+    'ngAnimate',
     'today.controller',
     'datetime.service',
     'ingestion.service',
     'errorCatcher.factory',
-    'errorHttpInterceptor.factory'
+    'errorHttpInterceptor.factory',
+    'toaster.service'
   ])
   .config(AjaxCatcherConfig)
   .config(UiRouterConfig);
