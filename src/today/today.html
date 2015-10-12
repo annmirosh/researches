@@ -12,7 +12,12 @@
     <br>
 
     <div ng-repeat="ingestion in todayCtrl.ingestions" class="panel panel-default">
-        <div class="panel-heading">{{ingestion.title}}</div>
+        <div class="panel-heading">
+            <span>{{ingestion.title}}</span>
+            <span class="pull-right" ng-click="todayCtrl.removeIngestion($index)">
+                <i class="glyphicon glyphicon-remove"></i>
+            </span>
+        </div>
         <div class="panel-body">
             Content
         </div>

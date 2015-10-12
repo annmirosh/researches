@@ -8,6 +8,7 @@
   function TodayController(IngestionService, DateTimeService, $http) {
     this.ingestions = [];
     this.addIngestion = addIngestion;
+    this.removeIngestion = removeIngestion;
     this.getTitleIngestion = getTitleIngestion;
 
     function addIngestion(isSnack) {
@@ -25,6 +26,10 @@
 
     function getTitleIngestion(isSnack) {
       return IngestionService.getTitle(isSnack);
+    }
+
+    function removeIngestion(index) {
+      this.ingestions.splice(index, 1);
     }
   }
 
