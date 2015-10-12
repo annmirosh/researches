@@ -10,12 +10,11 @@ exports.config = {
     'phantomjs.cli.args': [ '--ignore-ssl-errors=true', '--web-security=false' ]
   },
 
+  seleniumServerJar: 'node_modules/protractor/selenium/selenium-server-standalone-2.47.1.jar',
+
   chromeOnly: true,
 
   baseUrl: 'http://localhost:9999/src',
-
-  seleniumAddress: 'http://localhost:9999',
-
   framework: 'jasmine',
 
   jasmineNodeOpts: {

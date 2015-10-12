@@ -17,6 +17,7 @@
     "gulp-eslint": "^1.0.0",
     "gulp-livereload": "^3.8.0",
     "gulp-ng-annotate": "^1.1.0",
+    "gulp-protractor": "^1.0.0",
     "jquery": "^2.1.4",
     "karma": "^0.13.9",
     "karma-chai": "^0.1.0",
@@ -27,7 +28,7 @@
     "karma-sinon-chai": "^1.1.0",
     "mocha": "^2.3.2",
     "phantomjs": "^1.9.18",
-    "protractor": "^1.6.1",
+    "protractor": "^2.5.1",
     "require-dir": "^0.3.0",
     "sinon": "^1.16.1",
     "sinon-chai": "^2.8.0",
@@ -36,9 +37,7 @@
   },
   "scripts": {
     "test": "gulp test",
-    "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
-    "start-webdriver": "node node_modules/protractor/bin/webdriver-manager start",
-    "protractor": "protractor protractor-conf.js"
+    "install": "node node_modules/protractor/bin/webdriver-manager update"
   },
   "dependencies": {
     "angular-animate": "^1.4.6",
