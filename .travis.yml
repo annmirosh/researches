@@ -6,7 +6,7 @@ before_script:
   - 'bower install'
   - 'npm run install'
   - 'gulp'
-  - 'travis_setup.sh'
+  - 'bash travis_setup.sh'
 
 notifications:
   on_success: change
