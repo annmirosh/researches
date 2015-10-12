@@ -1,13 +1,17 @@
 language: node_js
 node_js:
-  - '0.10'
+- '0.10'
+addons:
+  sauce_connect: true
 before_script:
-  - 'npm install -g bower'
-  - 'bower install'
-  - 'npm run install'
-  - 'gulp'
-  - 'bash travis_setup.sh'
+- npm install -g bower
+- bower install
+- npm run install
+- gulp
 
 notifications:
   on_success: change
   on_failure: always
+env:
+  global:
+    secure: DZnyd+DVd4pq/EYxaNlugF9En5nhAf7wK5AuYzxMEWroIqm0qZY5RnztWnvg+tpf+iUndqvkHjknicv6DfUjkSIOUVdODoP6HdIzdLBH0J9Xc9zuPiXRaqwIAeYHtoCIAJ7IYb+++tPJn0PUO8bqL5/9H41RvpUbSLAaVvXGl5qR7tw/mr9vInSEyNWO4rU7QO8U3qgPPZzxCS1pa1B12RLXD89Kjys3zSmB8dWojsjmYych/0ecjClDp2w/Om7vBmX9sWIw5oxojxWr1TuQO+kvvcmuOT895lArxmMwByRhkxiXLuowIoTeFKpyplb731mqu5o4OfstxiWn4f6fVjc4palhdEk/omhaaUjyvQcwEiEkIfmoje8wThem4P1d+HDFeMAv/KMEfUT6ve1njTiqMCWdCJ9jiWFTCcDH0kJQpvwtuMMCv/C0Ay7KFdDQ4ga2noINqbb42xQgNnE+csdl0yZVTSaMNSbg6STmFUN0+94+Ekb+RWTuFCfY/quIsWgpmZZIL85FzBYW8EYjauRcdrc4dV0baTkA7hnAKJ4H1UsJba5AYWLSmK6AUC6z5j+xv+oLPDaEX/gIGSz+alf53nf7ARhX4HzhH1H8w+LKlagJ2y2pfWqN8jHar7meNYkFWao9ml4UatEvLL+Dbsg2mYXAFoudUMcfDHB1G1g=
