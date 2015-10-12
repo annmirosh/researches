@@ -3,7 +3,7 @@
 describe('Today view', function () {
   beforeEach(function () {
     browser.get('#');
-  })
+  });
 
   it('should have a title', function () {
     expect(browser.getTitle()).toEqual('Food Tracker');
@@ -35,13 +35,14 @@ describe('Today view', function () {
     var addSnackBtn = element(by.id('addSnack')),
       closeBtn;
 
-    addSnackBtn.click();
+    addSnackBtn.click().then(function () {
+      expect(element(by.css('.panel-heading')).isPresent()).toBe(true);
 
-    expect(element(by.css('.panel-heading').isPresent())).toBe(true);
+      closeBtn = element(by.css('.glyphicon-remove'));
 
-    closeBtn = element(by.css('.glyphicon-remove'));
-
-    closeBtn.click();
-    expect(element(by.css('.panel-heading').isPresent())).toBe(false);
+      closeBtn.click().then(function () {
+        expect(element(by.css('.panel-heading')).isPresent()).toBe(false);
+      });
+    });
   });
 });
