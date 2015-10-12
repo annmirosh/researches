@@ -5,4 +5,4 @@ var requireDir = require('require-dir'),
 requireDir('./tasks', {recurse: true});
 
 gulp.task('default', [ 'browserify' ]);
-gulp.task('test', [ 'protractor' ]);
+gulp.task('test', [ 'unitTests' ]);
