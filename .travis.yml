@@ -5,8 +5,8 @@ before_script:
   - 'npm install -g bower'
   - 'bower install'
   - 'npm run install'
-  - 'webdriver-manager start &'
   - 'gulp'
+  - 'bash sauce_connect_setup.sh'
 
 notifications:
   on_success: change
