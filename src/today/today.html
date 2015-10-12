@@ -1,9 +1,9 @@
 <div ng-controller="TodayController as todayCtrl">
     <toaster-container></toaster-container>
-    <button class="btn btn-default" ng-click="todayCtrl.addIngestion()">Add
+    <button id="addIngestion" class="btn btn-default" ng-click="todayCtrl.addIngestion()">Add
         {{todayCtrl.getTitleIngestion()}}
     </button>
-    <button class="btn btn-default" ng-click="todayCtrl.addIngestion(true)">Add
+    <button id="addSnack" class="btn btn-default" ng-click="todayCtrl.addIngestion(true)">Add
         {{todayCtrl.getTitleIngestion(true)}}</a></button>
     <br>
 
