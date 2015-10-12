@@ -8,6 +8,8 @@ before_script:
 - bower install
 - npm run install
 - gulp
+- gulp connect &
+
 
 notifications:
   on_success: change
