@@ -10,8 +10,8 @@
     </div>
     <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="active"><a ui-sref="root.today">Today</a></li>
-            <li><a ui-sref="root.history">History</a></li>
+            <li id="todayItem" ng-class="{active:('root.today' | includedByState) }"><a ui-sref="root.today">Today</a></li>
+            <li id="historyItem" ng-class="{active:('root.history' | includedByState)}"><a ui-sref="root.history">History</a></li>
         </ul>
     </div>
 </nav>
